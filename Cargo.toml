@@ -1,0 +1,17 @@
+[package]
+name = "clickhouse_snowflake_proxy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clickhouse-srv = "0.3.1"  # Replace with the latest version
+snowflake-connector-rs = "0.6.3"  # Replace with the latest version
+tokio = { version = "1", features = ["full"] }
+tokio-rustls = "0.23"
+rustls = "0.20"
+regex = "1"
+async-trait = "0.1"
+anyhow = "1.0"
+rustls-pemfile = "1.0"
+
+

@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  clickhouse_snowflake_proxy:
+    build: .
+    image: kbkeller/clickhouse-snowflake-proxy-native
+    ports:
+      - "9000:9000"
+    environment:
+       SNOWFLAKE_ACCOUNT: ""
+       SNOWFLAKE_DATABASE: ""
+       SNOWFLAKE_SCHEMA: ""
+       SNOWFLAKE_WAREHOUSE: ""
+       SNOWFLAKE_TIMEOUT: 60
+       LISTEN_ADDRESS: "0.0.0.0:9000"
