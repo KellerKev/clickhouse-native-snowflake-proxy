@@ -8,6 +8,14 @@ TLS support can be added by putting a TCP TLS reverse proxy in of this driver su
 For now if you want to run the samples and test out the proxy server just update the docker-compose file with your own credentials for Snowflake, 
 then run docker compose up and test the Go samples again the proxies. 
 
+If you want to use a private key instead of password, use the following string for the password your Clickhouse client:
+-----BEGIN PRIVATE KEY-----
+
+and set the environment variable SNOWFLAKE_KEY_PASS to the contents of our private key. 
+
+In the next release I will make sure that we have auto-detection of private keys in place for the Clickhouse client password field, to make this 
+a bit easier. 
+
 You can also build the proxy yourself by following these steps:
 
 1) Install RUST
